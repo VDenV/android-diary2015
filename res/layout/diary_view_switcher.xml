@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/diaryViewSwitcher"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:inAnimation="@android:anim/slide_in_left"
+    android:outAnimation="@android:anim/slide_out_right" >
+
+    <include android:id="@+id/diaryScreen" layout="@layout/diary_screen"/>
+    <include android:id="@+id/diaryScreen2" layout="@layout/diary_screen"/>
+
+</ViewFlipper>

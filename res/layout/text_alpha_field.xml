@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ua.org.sedu.diary.anroiddiary.widget.FormEditText
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/ua.org.sedu.diary.anroiddiary"
+    app:testType="alphaNumeric"
+    app:emptyAllowed="false"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:inputType="text"
+    android:singleLine="true"
+    android:text="test shkola"
+    android:textColor="@color/text_dark" />

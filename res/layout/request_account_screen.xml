@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:diary="http://schemas.android.com/apk/res/ua.org.sedu.diary.anroiddiary"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_background" >
+
+    <include
+        android:id="@+id/header_ref"
+        layout="@layout/header_with_logo" />
+
+    <!-- Login Form -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header_ref"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:id="@+id/accountRequstForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <!-- Father Name and Middle Name -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/NAME_MIDDLE_NAME_FIELD_LABEL"
+                android:textColor="@color/text_dark" />
+
+            <include
+                android:id="@+id/fatherFirstAndMiddleName"
+                layout="@layout/name_field" />
+
+            <!-- Father surname -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/SURNAME_FIELD_LABEL"
+                android:textColor="@color/text_dark" />
+
+            <include
+                android:id="@+id/fatherLastName"
+                layout="@layout/name_field" />
+
+            <!-- Pupil Name and Middle Name -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/PUPIL_NAME_MIDDLE_NAME_FIELD_LABEL"
+                android:textColor="@color/text_dark" />
+
+            <include
+                android:id="@+id/pupilFirstAndMiddleName"
+                layout="@layout/name_field" />
+
+            <!-- Pupil Surname -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/PUPIL_SURNAME_FIELD_LABEL"
+                android:textColor="@color/text_dark" />
+
+            <include
+                android:id="@+id/pupilLastName"
+                layout="@layout/name_field" />
+
+            <!-- Pupil Birth Date -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/PUPIL_BIRTH_DATE_LABEL"
+                android:textColor="@color/text_dark" />
+
+            <ua.org.sedu.diary.anroiddiary.widget.FormEditText
+                android:id="@+id/childBirthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:focusableInTouchMode="false"
+                android:hint="01/06/1990"
+                android:inputType="none"
+                android:onClick="onChildBirthdateClick"
+                android:textColor="@color/text_dark"
+                diary:datePattern="dd/MM/yyyy"
+                diary:emptyAllowed="false"
+                diary:testType="date"
+                tools:ignore="HardcodedText" />
+
+            <!-- School City -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/SCHOOL_CITY_FIELD_LABEL"
+                android:textColor="@color/text_dark" />
+
+            <Spinner
+                android:id="@+id/schoolCitySpinner"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/combo3"
+                android:prompt="@string/SCHOOL_CITY_SPINNER_TITLE" />
+
+            <!-- School -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/SCHOOL_FIELD_LABEL"
+                android:textColor="@color/text_dark" />
+
+            <include
+                android:id="@+id/school"
+                layout="@layout/numeric_field" />
+
+            <!-- Class selection -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/PUPIL_CLASS_FIELD_LABEL"
+                android:textColor="@color/text_dark" />
+
+            <Spinner
+                android:id="@+id/classGroupSpinner"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/combo3"
+                android:prompt="@string/PUPIL_CLASS_SPINNER_TITLE" />
+
+            <!-- Email -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/EMAIL_ADDRESS_FIELD_LABEL"
+                android:textColor="@color/text_dark" />
+
+            <include
+                android:id="@+id/emailAddress"
+                layout="@layout/email_field" />
+
+            <!-- Phone number -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/PHONE_NUMBER_FIELD_LABEL"
+                android:textColor="@color/text_dark" />
+
+            <include
+                android:id="@+id/phoneNumber"
+                layout="@layout/phone_field" />
+
+            <!-- Address -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ADDRESS_FIELD_LABEL"
+                android:textColor="@color/text_dark" />
+
+            <include
+                android:id="@+id/addressField"
+                layout="@layout/address_field" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dip"
+                android:onClick="onSendRegistration"
+                android:text="@string/SEND_REGISTRATION_FORM_BUTTON_LABEL"
+                android:textColor="@color/text_dark" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

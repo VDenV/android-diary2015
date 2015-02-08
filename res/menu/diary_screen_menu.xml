@@ -1,0 +1,5 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/logout"
+          android:title="@string/SETTINGS_LOGOUT_LABEL"
+          android:icon="@drawable/ic_menu_logout"/>
+</menu>

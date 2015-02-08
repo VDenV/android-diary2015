@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ua.org.sedu.diary.anroiddiary.widget.FormEditText
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/ua.org.sedu.diary.anroiddiary"
+    app:testType="regexp"
+    app:customRegexp="[(]0[0-9]{2}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"
+    app:emptyAllowed="false"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:inputType="phone"
+    android:singleLine="true"
+    android:hint="(0ХХ)ХХХ-ХХ-ХХ"
+    android:textColor="@color/text_dark" />

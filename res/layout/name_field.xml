@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ua.org.sedu.diary.anroiddiary.widget.FormEditText
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:diary="http://schemas.android.com/apk/res/ua.org.sedu.diary.anroiddiary"
+    diary:testType="alpha"
+    diary:emptyAllowed="false"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:inputType="text|textCapWords"
+    android:singleLine="true"
+    android:textColor="@color/text_dark" />
